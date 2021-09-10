@@ -1,0 +1,139 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; Print.s
+    2 00000000         ; Student names: change this to your names or look very 
+                       silly
+    3 00000000         ; Last modification date: change this to the last modifi
+                       cation date or look very silly
+    4 00000000         ; Runs on TM4C123
+    5 00000000         ; EE319K lab 7 device driver for any LCD
+    6 00000000         ;
+    7 00000000         ; As part of Lab 7, students need to implement these LCD
+                       _OutDec and LCD_OutFix
+    8 00000000         ; This driver assumes two low-level LCD functions
+    9 00000000         ; SSD1306_OutChar   outputs a single 8-bit ASCII charact
+                       er
+   10 00000000         ; SSD1306_OutString outputs a null-terminated string 
+   11 00000000         
+   12 00000000                 IMPORT           SSD1306_OutChar
+   13 00000000                 IMPORT           SSD1306_OutString
+   14 00000000                 EXPORT           LCD_OutDec
+   15 00000000                 EXPORT           LCD_OutFix
+   16 00000000                 PRESERVE8
+   17 00000000                 AREA             |.text|, CODE, READONLY, ALIGN=
+2
+   18 00000000                 THUMB
+   19 00000000         
+   20 00000000         
+   21 00000000         
+   22 00000000         ;-----------------------LCD_OutDec----------------------
+                       -
+   23 00000000         ; Output a 32-bit number in unsigned decimal format
+   24 00000000         ; Input: R0 (call by value) 32-bit unsigned number
+   25 00000000         ; Output: none
+   26 00000000         ; Invariables: This function must not permanently modify
+                        registers R4 to R11
+   27 00000000         LCD_OutDec
+   28 00000000         
+   29 00000000         
+   30 00000000 4770            BX               LR
+   31 00000002         ;* * * * * * * * End of LCD_OutDec * * * * * * * *
+   32 00000002         
+   33 00000002         ; -----------------------LCD _OutFix--------------------
+                       --
+   34 00000002         ; Output characters to LCD display in fixed-point format
+                       
+   35 00000002         ; unsigned decimal, resolution 0.01, range 0.00 to 9.99
+   36 00000002         ; Inputs:  R0 is an unsigned 32-bit number
+   37 00000002         ; Outputs: none
+   38 00000002         ; E.g., R0=0,    then output "0.00 "
+   39 00000002         ;       R0=3,    then output "0.03 "
+   40 00000002         ;       R0=89,   then output "0.89 "
+   41 00000002         ;       R0=123,  then output "1.23 "
+   42 00000002         ;       R0=999,  then output "9.99 "
+   43 00000002         ;       R0>999,  then output "*.** "
+   44 00000002         ; Invariables: This function must not permanently modify
+                        registers R4 to R11
+   45 00000002         LCD_OutFix
+   46 00000002         
+   47 00000002 4770            BX               LR
+   48 00000004         
+   49 00000004                 ALIGN
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   50 00000004         ;* * * * * * * * End of LCD_OutFix * * * * * * * *
+   51 00000004         
+   52 00000004                 ALIGN                        ; make sure the end
+                                                             of this section is
+                                                             aligned
+   53 00000004                 END                          ; end of file
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --apcs=interw
+ork --depend=.\print.d -o.\print.o -I.\RTE\_Lab10 -I"C:\Users\Arsh Gamare\AppDa
+ta\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include" -I"C:\Users\Arsh Gamare\
+AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123" --predefine
+="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 533" --predefine="_RTE_ SE
+TA 1" --predefine="TM4C123GH6PM SETA 1" --predefine="_RTE_ SETA 1" --list=.\pri
+nt.lst Print.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 17 in file Print.s
+   Uses
+      None
+Comment: .text unused
+LCD_OutDec 00000000
+
+Symbol: LCD_OutDec
+   Definitions
+      At line 27 in file Print.s
+   Uses
+      At line 14 in file Print.s
+Comment: LCD_OutDec used once
+LCD_OutFix 00000002
+
+Symbol: LCD_OutFix
+   Definitions
+      At line 45 in file Print.s
+   Uses
+      At line 15 in file Print.s
+Comment: LCD_OutFix used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+SSD1306_OutChar 00000000
+
+Symbol: SSD1306_OutChar
+   Definitions
+      At line 12 in file Print.s
+   Uses
+      None
+Comment: SSD1306_OutChar unused
+SSD1306_OutString 00000000
+
+Symbol: SSD1306_OutString
+   Definitions
+      At line 13 in file Print.s
+   Uses
+      None
+Comment: SSD1306_OutString unused
+2 symbols
+339 symbols in table

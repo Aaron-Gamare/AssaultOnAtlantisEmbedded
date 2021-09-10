@@ -1,0 +1,1149 @@
+Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup.o(RESET) refers to startup.o(STACK) for StackMem
+    startup.o(RESET) refers to lab10.o(i.SysTick_Handler) for SysTick_Handler
+    startup.o(RESET) refers to timer0.o(i.Timer0A_Handler) for Timer0A_Handler
+    startup.o(RESET) refers to timer1.o(i.Timer1A_Handler) for Timer1A_Handler
+    startup.o(RESET) refers to texas.o(i.Timer5A_Handler) for Timer5A_Handler
+    startup.o(RESET) refers to __main.o(!!!main) for __main
+    startup.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup.o(.text) refers to startup.o(HEAP) for HeapMem
+    startup.o(.text) refers to startup.o(STACK) for StackMem
+    random.o(.text) refers to random.o(DATA) for M
+    lab10.o(i.Collision) refers to lab10.o(.bss) for tridents
+    lab10.o(i.Collision) refers to lab10.o(.data) for icount
+    lab10.o(i.Draw) refers to ssd1306.o(i.SSD1306_ClearBuffer) for SSD1306_ClearBuffer
+    lab10.o(i.Draw) refers to random.o(.text) for Random
+    lab10.o(i.Draw) refers to ssd1306.o(i.SSD1306_DrawBMP) for SSD1306_DrawBMP
+    lab10.o(i.Draw) refers to ssd1306.o(i.SSD1306_OutBuffer) for SSD1306_OutBuffer
+    lab10.o(i.Draw) refers to lab10.o(.data) for m
+    lab10.o(i.Draw) refers to lab10.o(.bss) for Player
+    lab10.o(i.Fire) refers to sound.o(i.Sound_Shoot) for Sound_Shoot
+    lab10.o(i.Fire) refers to lab10.o(.bss) for tridents
+    lab10.o(i.Fire) refers to lab10.o(.constdata) for trident
+    lab10.o(i.Init) refers to lab10.o(.bss) for Player
+    lab10.o(i.Init) refers to lab10.o(.constdata) for arrow
+    lab10.o(i.Move) refers to adc.o(i.ADC_In) for ADC_In
+    lab10.o(i.Move) refers to lab10.o(.bss) for Player
+    lab10.o(i.Move) refers to lab10.o(.data) for NeedtoDraw
+    lab10.o(i.Spawn) refers to lab10.o(.bss) for bigships
+    lab10.o(i.Spawn1) refers to lab10.o(.bss) for mediumships
+    lab10.o(i.Spawn2) refers to lab10.o(.bss) for smallships
+    lab10.o(i.Spawn3) refers to lab10.o(.bss) for jellyfish
+    lab10.o(i.Spawn4) refers to lab10.o(.bss) for fishies
+    lab10.o(i.SysTick_Handler) refers to switch.o(i.Switch_In) for Switch_In
+    lab10.o(i.SysTick_Handler) refers to ssd1306.o(i.SSD1306_OutClear) for SSD1306_OutClear
+    lab10.o(i.SysTick_Handler) refers to ssd1306.o(i.SSD1306_OutBuffer) for SSD1306_OutBuffer
+    lab10.o(i.SysTick_Handler) refers to ssd1306.o(i.SSD1306_SetCursor) for SSD1306_SetCursor
+    lab10.o(i.SysTick_Handler) refers to ssd1306.o(i.SSD1306_OutString) for SSD1306_OutString
+    lab10.o(i.SysTick_Handler) refers to lab10.o(i.Delay100ms) for Delay100ms
+    lab10.o(i.SysTick_Handler) refers to lab10.o(i.Fire) for Fire
+    lab10.o(i.SysTick_Handler) refers to random.o(.text) for Random
+    lab10.o(i.SysTick_Handler) refers to lab10.o(i.Spawn) for Spawn
+    lab10.o(i.SysTick_Handler) refers to lab10.o(i.Spawn1) for Spawn1
+    lab10.o(i.SysTick_Handler) refers to lab10.o(i.Spawn2) for Spawn2
+    lab10.o(i.SysTick_Handler) refers to lab10.o(i.Spawn3) for Spawn3
+    lab10.o(i.SysTick_Handler) refers to lab10.o(i.Spawn4) for Spawn4
+    lab10.o(i.SysTick_Handler) refers to lab10.o(i.Move) for Move
+    lab10.o(i.SysTick_Handler) refers to lab10.o(.data) for lang
+    lab10.o(i.SysTick_Handler) refers to lab10.o(.constdata) for bigboi
+    lab10.o(i.main) refers to startup.o(.text) for DisableInterrupts
+    lab10.o(i.main) refers to texas.o(i.TExaS_Init) for TExaS_Init
+    lab10.o(i.main) refers to ssd1306.o(i.SSD1306_Init) for SSD1306_Init
+    lab10.o(i.main) refers to ssd1306.o(i.SSD1306_OutClear) for SSD1306_OutClear
+    lab10.o(i.main) refers to adc.o(i.ADC_Init) for ADC_Init
+    lab10.o(i.main) refers to adc.o(i.ADC_In) for ADC_In
+    lab10.o(i.main) refers to random.o(.text) for Random_Init
+    lab10.o(i.main) refers to lab10.o(i.Profile_Init) for Profile_Init
+    lab10.o(i.main) refers to ssd1306.o(i.SSD1306_ClearBuffer) for SSD1306_ClearBuffer
+    lab10.o(i.main) refers to ssd1306.o(i.SSD1306_DrawBMP) for SSD1306_DrawBMP
+    lab10.o(i.main) refers to ssd1306.o(i.SSD1306_OutBuffer) for SSD1306_OutBuffer
+    lab10.o(i.main) refers to lab10.o(i.Delay100ms) for Delay100ms
+    lab10.o(i.main) refers to switch.o(i.Switch_Init) for Switch_Init
+    lab10.o(i.main) refers to ssd1306.o(i.SSD1306_SetCursor) for SSD1306_SetCursor
+    lab10.o(i.main) refers to ssd1306.o(i.SSD1306_OutString) for SSD1306_OutString
+    lab10.o(i.main) refers to switch.o(i.Switch_In) for Switch_In
+    lab10.o(i.main) refers to lab10.o(i.SysTick_Init20Hz) for SysTick_Init20Hz
+    lab10.o(i.main) refers to sound.o(i.Sound_Init) for Sound_Init
+    lab10.o(i.main) refers to lab10.o(i.Init) for Init
+    lab10.o(i.main) refers to lab10.o(i.Draw) for Draw
+    lab10.o(i.main) refers to lab10.o(i.Collision) for Collision
+    lab10.o(i.main) refers to ssd1306.o(i.SSD1306_OutUDec2) for SSD1306_OutUDec2
+    lab10.o(i.main) refers to lab10.o(i.LogicAnalyzerTask) for LogicAnalyzerTask
+    lab10.o(i.main) refers to lab10.o(.constdata) for titlepage
+    lab10.o(i.main) refers to lab10.o(.data) for lang
+    cortexm.o(i.Clock_Delay1ms) refers to cortexm.o(.emb_text) for Clock_Delay
+    timer0.o(i.Timer0A_Handler) refers to timer0.o(.data) for PeriodicTask0
+    timer0.o(i.Timer0_Init) refers to timer0.o(.data) for PeriodicTask0
+    timer1.o(i.Timer1A_Handler) refers to timer1.o(.data) for PeriodicTask1
+    timer1.o(i.Timer1_Init) refers to timer1.o(.data) for PeriodicTask1
+    sound.o(i.SoundTask) refers to dac.o(i.DAC_Out) for DAC_Out
+    sound.o(i.SoundTask) refers to sound.o(.data) for Length
+    sound.o(i.Sound_Init) refers to dac.o(i.DAC_Init) for DAC_Init
+    sound.o(i.Sound_Init) refers to timer0.o(i.Timer0_Init) for Timer0_Init
+    sound.o(i.Sound_Init) refers to sound.o(i.SoundTask) for SoundTask
+    sound.o(i.Sound_Shoot) refers to sound.o(i.Sound_Start) for Sound_Start
+    sound.o(i.Sound_Shoot) refers to sound.o(.constdata) for shoot2
+    sound.o(i.Sound_Start) refers to sound.o(.data) for Length
+    print.o(.text) refers (Special) to ssd1306.o(i.SSD1306_OutChar) for SSD1306_OutChar
+    print.o(.text) refers (Special) to ssd1306.o(i.SSD1306_OutString) for SSD1306_OutString
+    ssd1306.o(i.SSD1306_ClearBuffer) refers to ssd1306.o(i.SSD1306_SetCursor) for SSD1306_SetCursor
+    ssd1306.o(i.SSD1306_ClearBuffer) refers to ssd1306.o(.bss) for buffer
+    ssd1306.o(i.SSD1306_Dim) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_Dim) refers to ssd1306.o(.data) for vccstate
+    ssd1306.o(i.SSD1306_DrawBMP) refers to ssd1306.o(.bss) for buffer
+    ssd1306.o(i.SSD1306_DrawChar) refers to ssd1306.o(i.SSD1306_DrawPixel) for SSD1306_DrawPixel
+    ssd1306.o(i.SSD1306_DrawChar) refers to ssd1306.o(.constdata) for ASCII
+    ssd1306.o(i.SSD1306_DrawFastHLine) refers to ssd1306.o(i.ssd1306drawFastVLineInternal) for ssd1306drawFastVLineInternal
+    ssd1306.o(i.SSD1306_DrawFastHLine) refers to ssd1306.o(i.ssd1306drawFastHLineInternal) for ssd1306drawFastHLineInternal
+    ssd1306.o(i.SSD1306_DrawFastHLine) refers to ssd1306.o(.data) for rotation
+    ssd1306.o(i.SSD1306_DrawFastVLine) refers to ssd1306.o(i.ssd1306drawFastHLineInternal) for ssd1306drawFastHLineInternal
+    ssd1306.o(i.SSD1306_DrawFastVLine) refers to ssd1306.o(i.ssd1306drawFastVLineInternal) for ssd1306drawFastVLineInternal
+    ssd1306.o(i.SSD1306_DrawFastVLine) refers to ssd1306.o(.data) for rotation
+    ssd1306.o(i.SSD1306_DrawFullImage) refers to ssd1306.o(i.ssd1306commandList) for ssd1306commandList
+    ssd1306.o(i.SSD1306_DrawFullImage) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_DrawFullImage) refers to i2c3.o(i.I2C3_SendData) for I2C3_SendData
+    ssd1306.o(i.SSD1306_DrawFullImage) refers to ssd1306.o(i.SSD1306_SetCursor) for SSD1306_SetCursor
+    ssd1306.o(i.SSD1306_DrawFullImage) refers to ssd1306.o(.constdata) for dlist1
+    ssd1306.o(i.SSD1306_DrawPixel) refers to ssd1306.o(.data) for rotation
+    ssd1306.o(i.SSD1306_DrawPixel) refers to ssd1306.o(.bss) for buffer
+    ssd1306.o(i.SSD1306_DrawPoint) refers to ssd1306.o(i.SSD1306_DrawPixel) for SSD1306_DrawPixel
+    ssd1306.o(i.SSD1306_DrawPoint) refers to ssd1306.o(.data) for MinX
+    ssd1306.o(i.SSD1306_DrawString) refers to ssd1306.o(i.SSD1306_DrawChar) for SSD1306_DrawChar
+    ssd1306.o(i.SSD1306_GetBuffer) refers to ssd1306.o(.bss) for buffer
+    ssd1306.o(i.SSD1306_GetPixel) refers to ssd1306.o(.data) for rotation
+    ssd1306.o(i.SSD1306_GetPixel) refers to ssd1306.o(.bss) for buffer
+    ssd1306.o(i.SSD1306_Init) refers to cortexm.o(i.Clock_Delay1ms) for Clock_Delay1ms
+    ssd1306.o(i.SSD1306_Init) refers to i2c3.o(i.I2C3_Init) for I2C3_Init
+    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.SSD1306_ClearBuffer) for SSD1306_ClearBuffer
+    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.ssd1306commandList) for ssd1306commandList
+    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.SSD1306_OutBuffer) for SSD1306_OutBuffer
+    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(i.SSD1306_SetCursor) for SSD1306_SetCursor
+    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(.data) for vccstate
+    ssd1306.o(i.SSD1306_Init) refers to ssd1306.o(.constdata) for init1
+    ssd1306.o(i.SSD1306_InvertDisplay) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_OutBuffer) refers to ssd1306.o(i.ssd1306commandList) for ssd1306commandList
+    ssd1306.o(i.SSD1306_OutBuffer) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_OutBuffer) refers to i2c3.o(i.I2C3_SendData) for I2C3_SendData
+    ssd1306.o(i.SSD1306_OutBuffer) refers to ssd1306.o(.constdata) for dlist1
+    ssd1306.o(i.SSD1306_OutBuffer) refers to ssd1306.o(.bss) for buffer
+    ssd1306.o(i.SSD1306_OutChar) refers to ssd1306.o(i.ssd1306command) for ssd1306command
+    ssd1306.o(i.SSD1306_OutChar) refers to i2c3.o(i.I2C3_SendData) for I2C3_SendData
+    ssd1306.o(i.SSD1306_OutChar) refers to ssd1306.o(.data) for CurrentX
+    ssd1306.o(i.SSD1306_OutChar) refers to ssd1306.o(.constdata) for ASCII
+    ssd1306.o(i.SSD1306_OutClear) refers to ssd1306.o(i.SSD1306_ClearBuffer) for SSD1306_ClearBuffer
+    ssd1306.o(i.SSD1306_OutClear) refers to ssd1306.o(i.SSD1306_OutBuffer) for SSD1306_OutBuffer
+    ssd1306.o(i.SSD1306_OutHex7) refers to ssd1306.o(i.SSD1306_OutChar) for SSD1306_OutChar
+    ssd1306.o(i.SSD1306_OutSDec) refers to ssd1306.o(i.SSD1306_OutString) for SSD1306_OutString
+    ssd1306.o(i.SSD1306_OutSDec) refers to ssd1306.o(i.SSD1306_OutChar) for SSD1306_OutChar
+    ssd1306.o(i.SSD1306_OutSFix1) refers to ssd1306.o(i.SSD1306_OutString) for SSD1306_OutString
+    ssd1306.o(i.SSD1306_OutString) refers to ssd1306.o(i.SSD1306_OutChar) for SSD1306_OutChar
+    ssd1306.o(i.SSD1306_OutUDec) refers to ssd1306.o(i.SSD1306_OutString) for SSD1306_OutString
+    ssd1306.o(i.SSD1306_OutUDec) refers to ssd1306.o(i.SSD1306_OutChar) for SSD1306_OutChar
+    ssd1306.o(i.SSD1306_OutUDec16) refers to ssd1306.o(i.SSD1306_OutChar) for SSD1306_OutChar
+    ssd1306.o(i.SSD1306_OutUDec2) refers to ssd1306.o(i.SSD1306_OutChar) for SSD1306_OutChar
+    ssd1306.o(i.SSD1306_OutUFix1) refers to ssd1306.o(i.SSD1306_OutString) for SSD1306_OutString
+    ssd1306.o(i.SSD1306_OutUHex7) refers to ssd1306.o(i.SSD1306_OutString) for SSD1306_OutString
+    ssd1306.o(i.SSD1306_OutUHex7) refers to ssd1306.o(i.SSD1306_OutHex7) for SSD1306_OutHex7
+    ssd1306.o(i.SSD1306_SetCursor) refers to ssd1306.o(i.ssd1306command) for ssd1306command
+    ssd1306.o(i.SSD1306_SetCursor) refers to ssd1306.o(.data) for CurrentX
+    ssd1306.o(i.SSD1306_SetPlot) refers to ssd1306.o(.data) for MaxX
+    ssd1306.o(i.SSD1306_startscrolldiagleft) refers to ssd1306.o(i.ssd1306commandList) for ssd1306commandList
+    ssd1306.o(i.SSD1306_startscrolldiagleft) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_startscrolldiagleft) refers to ssd1306.o(.constdata) for scrollList4a
+    ssd1306.o(i.SSD1306_startscrolldiagright) refers to ssd1306.o(i.ssd1306commandList) for ssd1306commandList
+    ssd1306.o(i.SSD1306_startscrolldiagright) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_startscrolldiagright) refers to ssd1306.o(.constdata) for scrollList3a
+    ssd1306.o(i.SSD1306_startscrollleft) refers to ssd1306.o(i.ssd1306commandList) for ssd1306commandList
+    ssd1306.o(i.SSD1306_startscrollleft) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_startscrollleft) refers to ssd1306.o(.constdata) for scrollList2a
+    ssd1306.o(i.SSD1306_startscrollright) refers to ssd1306.o(i.ssd1306commandList) for ssd1306commandList
+    ssd1306.o(i.SSD1306_startscrollright) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.SSD1306_startscrollright) refers to ssd1306.o(.constdata) for scrollList1a
+    ssd1306.o(i.SSD1306_stopscroll) refers to ssd1306.o(i.ssd1306command1) for ssd1306command1
+    ssd1306.o(i.fputc) refers to ssd1306.o(i.SSD1306_OutChar) for SSD1306_OutChar
+    ssd1306.o(i.ssd1306command) refers to i2c3.o(i.I2C3_Send2) for I2C3_Send2
+    ssd1306.o(i.ssd1306command1) refers to i2c3.o(i.I2C3_Send2) for I2C3_Send2
+    ssd1306.o(i.ssd1306commandList) refers to i2c3.o(i.I2C3_Send) for I2C3_Send
+    ssd1306.o(i.ssd1306drawFastHLineInternal) refers to ssd1306.o(.bss) for buffer
+    ssd1306.o(i.ssd1306drawFastVLineInternal) refers to ssd1306.o(.bss) for buffer
+    ssd1306.o(i.ssd1306drawFastVLineInternal) refers to ssd1306.o(.constdata) for premask
+    texas.o(i.TExaS_Init) refers to texas.o(i.PLL_Init) for PLL_Init
+    texas.o(i.TExaS_Init) refers to texas.o(i.ADC1_Init) for ADC1_Init
+    texas.o(i.TExaS_Init) refers to texas.o(i.UART0_Init) for UART0_Init
+    texas.o(i.TExaS_Init) refers to texas.o(.data) for sendDataPt
+    texas.o(i.Timer5A_Handler) refers to texas.o(.data) for sendDataPt
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to lab10.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_fini_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000009) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000011) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000012) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000006) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing lab10.o(i.ScopeTask), (20 bytes).
+    Removing timer1.o(i.Timer1_Init), (96 bytes).
+    Removing print.o(.text), (4 bytes).
+    Removing i2c3.o(i.I2C3_Recv), (276 bytes).
+    Removing i2c3.o(i.I2C3_Recv1), (88 bytes).
+    Removing i2c3.o(i.I2C3_Recv2), (120 bytes).
+    Removing i2c3.o(i.I2C3_Recv3), (116 bytes).
+    Removing i2c3.o(i.I2C3_Send1), (60 bytes).
+    Removing i2c3.o(i.I2C3_Send4), (212 bytes).
+    Removing ssd1306.o(i.SSD1306_Dim), (44 bytes).
+    Removing ssd1306.o(i.SSD1306_DrawChar), (104 bytes).
+    Removing ssd1306.o(i.SSD1306_DrawFastHLine), (140 bytes).
+    Removing ssd1306.o(i.SSD1306_DrawFastVLine), (140 bytes).
+    Removing ssd1306.o(i.SSD1306_DrawFullImage), (44 bytes).
+    Removing ssd1306.o(i.SSD1306_DrawPixel), (248 bytes).
+    Removing ssd1306.o(i.SSD1306_DrawPoint), (124 bytes).
+    Removing ssd1306.o(i.SSD1306_DrawString), (40 bytes).
+    Removing ssd1306.o(i.SSD1306_GetBuffer), (8 bytes).
+    Removing ssd1306.o(i.SSD1306_GetPixel), (124 bytes).
+    Removing ssd1306.o(i.SSD1306_InvertDisplay), (20 bytes).
+    Removing ssd1306.o(i.SSD1306_OutHex7), (36 bytes).
+    Removing ssd1306.o(i.SSD1306_OutSDec), (440 bytes).
+    Removing ssd1306.o(i.SSD1306_OutSFix1), (208 bytes).
+    Removing ssd1306.o(i.SSD1306_OutUDec), (412 bytes).
+    Removing ssd1306.o(i.SSD1306_OutUDec16), (144 bytes).
+    Removing ssd1306.o(i.SSD1306_OutUFix1), (108 bytes).
+    Removing ssd1306.o(i.SSD1306_OutUHex7), (40 bytes).
+    Removing ssd1306.o(i.SSD1306_SetPlot), (104 bytes).
+    Removing ssd1306.o(i.SSD1306_startscrolldiagleft), (68 bytes).
+    Removing ssd1306.o(i.SSD1306_startscrolldiagright), (68 bytes).
+    Removing ssd1306.o(i.SSD1306_startscrollleft), (52 bytes).
+    Removing ssd1306.o(i.SSD1306_startscrollright), (52 bytes).
+    Removing ssd1306.o(i.SSD1306_stopscroll), (10 bytes).
+    Removing ssd1306.o(i.ferror), (8 bytes).
+    Removing ssd1306.o(i.fgetc), (6 bytes).
+    Removing ssd1306.o(i.fputc), (16 bytes).
+    Removing ssd1306.o(i.ssd1306drawFastHLineInternal), (164 bytes).
+    Removing ssd1306.o(i.ssd1306drawFastVLineInternal), (356 bytes).
+    Removing texas.o(i.TExaS_Stop), (24 bytes).
+
+39 unused section(s) (total 4344 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      644  startup.o(RESET)
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    ..\\inc\\CortexM.c                       0x00000000   Number         0  cortexm.o ABSOLUTE
+    ..\inc\CortexM.c                         0x00000000   Number         0  cortexm.o ABSOLUTE
+    ADC.c                                    0x00000000   Number         0  adc.o ABSOLUTE
+    DAC.c                                    0x00000000   Number         0  dac.o ABSOLUTE
+    I2C3.c                                   0x00000000   Number         0  i2c3.o ABSOLUTE
+    Lab10.c                                  0x00000000   Number         0  lab10.o ABSOLUTE
+    Print.s                                  0x00000000   Number         0  print.o ABSOLUTE
+    SSD1306.c                                0x00000000   Number         0  ssd1306.o ABSOLUTE
+    Sound.c                                  0x00000000   Number         0  sound.o ABSOLUTE
+    Switch.c                                 0x00000000   Number         0  switch.o ABSOLUTE
+    TExaS.c                                  0x00000000   Number         0  texas.o ABSOLUTE
+    Timer0.c                                 0x00000000   Number         0  timer0.o ABSOLUTE
+    Timer1.c                                 0x00000000   Number         0  timer1.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    random.s                                 0x00000000   Number         0  random.o ABSOLUTE
+    startup.s                                0x00000000   Number         0  startup.o ABSOLUTE
+    !!!main                                  0x00000284   Section        8  __main.o(!!!main)
+    !!!scatter                               0x0000028c   Section       52  __scatter.o(!!!scatter)
+    !!handler_copy                           0x000002c0   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x000002dc   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x000002f8   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x000002fa   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x000002fa   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x000002fc   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x000002fe   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x000002fe   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000006      0x000002fe   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    .ARM.Collect$$libshutdown$$00000009      0x000002fe   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    .ARM.Collect$$libshutdown$$0000000C      0x000002fe   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000E      0x000002fe   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    .ARM.Collect$$libshutdown$$00000011      0x000002fe   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000011)
+    .ARM.Collect$$libshutdown$$00000012      0x000002fe   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000012)
+    .ARM.Collect$$rtentry$$00000000          0x00000300   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x00000300   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x00000300   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x00000306   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x00000306   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x0000030a   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x0000030a   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x00000312   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x00000314   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x00000314   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x00000318   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .emb_text                                0x00000320   Section        6  cortexm.o(.emb_text)
+    .text                                    0x00000328   Section       48  startup.o(.text)
+    .text                                    0x00000358   Section       60  random.o(.text)
+    .text                                    0x00000394   Section        0  heapauxi.o(.text)
+    .text                                    0x0000039a   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x000003e4   Section        0  exit.o(.text)
+    .text                                    0x000003f8   Section        8  libspace.o(.text)
+    .text                                    0x00000400   Section        0  sys_exit.o(.text)
+    .text                                    0x0000040c   Section        2  use_no_semi.o(.text)
+    .text                                    0x0000040e   Section        0  indicate_semi.o(.text)
+    i.ADC1_Init                              0x00000410   Section        0  texas.o(i.ADC1_Init)
+    i.ADC_In                                 0x000004d8   Section        0  adc.o(i.ADC_In)
+    i.ADC_Init                               0x00000504   Section        0  adc.o(i.ADC_Init)
+    i.Clock_Delay1ms                         0x000005f0   Section        0  cortexm.o(i.Clock_Delay1ms)
+    i.Collision                              0x00000608   Section        0  lab10.o(i.Collision)
+    i.DAC_Init                               0x00000abc   Section        0  dac.o(i.DAC_Init)
+    i.DAC_Out                                0x00000af4   Section        0  dac.o(i.DAC_Out)
+    i.Delay100ms                             0x00000b00   Section        0  lab10.o(i.Delay100ms)
+    i.Draw                                   0x00000b24   Section        0  lab10.o(i.Draw)
+    i.Fire                                   0x00000dc8   Section        0  lab10.o(i.Fire)
+    i.I2C3_Init                              0x00000e50   Section        0  i2c3.o(i.I2C3_Init)
+    i.I2C3_Send                              0x00000efc   Section        0  i2c3.o(i.I2C3_Send)
+    i.I2C3_Send2                             0x00000fdc   Section        0  i2c3.o(i.I2C3_Send2)
+    i.I2C3_SendData                          0x0000104c   Section        0  i2c3.o(i.I2C3_SendData)
+    i.Init                                   0x000010c8   Section        0  lab10.o(i.Init)
+    i.LogicAnalyzerTask                      0x00001274   Section        0  lab10.o(i.LogicAnalyzerTask)
+    i.Move                                   0x00001294   Section        0  lab10.o(i.Move)
+    i.PLL_Init                               0x00001768   Section        0  texas.o(i.PLL_Init)
+    i.Profile_Init                           0x000017e4   Section        0  lab10.o(i.Profile_Init)
+    i.SSD1306_ClearBuffer                    0x00001848   Section        0  ssd1306.o(i.SSD1306_ClearBuffer)
+    i.SSD1306_DrawBMP                        0x0000186c   Section        0  ssd1306.o(i.SSD1306_DrawBMP)
+    i.SSD1306_Init                           0x00001a84   Section        0  ssd1306.o(i.SSD1306_Init)
+    i.SSD1306_OutBuffer                      0x00001b40   Section        0  ssd1306.o(i.SSD1306_OutBuffer)
+    i.SSD1306_OutChar                        0x00001b68   Section        0  ssd1306.o(i.SSD1306_OutChar)
+    i.SSD1306_OutClear                       0x00001c6c   Section        0  ssd1306.o(i.SSD1306_OutClear)
+    i.SSD1306_OutString                      0x00001c78   Section        0  ssd1306.o(i.SSD1306_OutString)
+    i.SSD1306_OutUDec2                       0x00001c90   Section        0  ssd1306.o(i.SSD1306_OutUDec2)
+    i.SSD1306_SetCursor                      0x00001ce4   Section        0  ssd1306.o(i.SSD1306_SetCursor)
+    i.SoundTask                              0x00001d54   Section        0  sound.o(i.SoundTask)
+    i.Sound_Init                             0x00001d9c   Section        0  sound.o(i.Sound_Init)
+    i.Sound_Shoot                            0x00001db4   Section        0  sound.o(i.Sound_Shoot)
+    i.Sound_Start                            0x00001dc8   Section        0  sound.o(i.Sound_Start)
+    i.Spawn                                  0x00001de8   Section        0  lab10.o(i.Spawn)
+    i.Spawn1                                 0x00001e58   Section        0  lab10.o(i.Spawn1)
+    i.Spawn2                                 0x00001ecc   Section        0  lab10.o(i.Spawn2)
+    i.Spawn3                                 0x00001f40   Section        0  lab10.o(i.Spawn3)
+    i.Spawn4                                 0x00001fb4   Section        0  lab10.o(i.Spawn4)
+    i.Switch_In                              0x00002028   Section        0  switch.o(i.Switch_In)
+    i.Switch_Init                            0x00002034   Section        0  switch.o(i.Switch_Init)
+    i.SysTick_Handler                        0x00002078   Section        0  lab10.o(i.SysTick_Handler)
+    i.SysTick_Init20Hz                       0x000021bc   Section        0  lab10.o(i.SysTick_Init20Hz)
+    i.TExaS_Init                             0x000021ec   Section        0  texas.o(i.TExaS_Init)
+    i.Timer0A_Handler                        0x0000225c   Section        0  timer0.o(i.Timer0A_Handler)
+    i.Timer0_Init                            0x00002274   Section        0  timer0.o(i.Timer0_Init)
+    i.Timer1A_Handler                        0x000022d4   Section        0  timer1.o(i.Timer1A_Handler)
+    i.Timer5A_Handler                        0x000022ec   Section        0  texas.o(i.Timer5A_Handler)
+    i.UART0_Init                             0x00002304   Section        0  texas.o(i.UART0_Init)
+    i.main                                   0x000023b0   Section        0  lab10.o(i.main)
+    i.ssd1306command                         0x00002738   Section        0  ssd1306.o(i.ssd1306command)
+    i.ssd1306command1                        0x00002748   Section        0  ssd1306.o(i.ssd1306command1)
+    i.ssd1306commandList                     0x00002758   Section        0  ssd1306.o(i.ssd1306commandList)
+    .constdata                               0x0000276a   Section    16843  lab10.o(.constdata)
+    .constdata                               0x00006935   Section     4080  sound.o(.constdata)
+    .constdata                               0x00007925   Section     1443  ssd1306.o(.constdata)
+    ASCII                                    0x00007925   Data        1374  ssd1306.o(.constdata)
+    init1                                    0x00007e83   Data           5  ssd1306.o(.constdata)
+    init2                                    0x00007e88   Data           5  ssd1306.o(.constdata)
+    init3                                    0x00007e8d   Data           5  ssd1306.o(.constdata)
+    init4b                                   0x00007e92   Data           4  ssd1306.o(.constdata)
+    init5                                    0x00007e96   Data           7  ssd1306.o(.constdata)
+    premask                                  0x00007e9d   Data           8  ssd1306.o(.constdata)
+    postmask                                 0x00007ea5   Data           8  ssd1306.o(.constdata)
+    dlist1                                   0x00007ead   Data           5  ssd1306.o(.constdata)
+    scrollList1a                             0x00007eb2   Data           2  ssd1306.o(.constdata)
+    scrollList1b                             0x00007eb4   Data           3  ssd1306.o(.constdata)
+    scrollList2a                             0x00007eb7   Data           2  ssd1306.o(.constdata)
+    scrollList2b                             0x00007eb9   Data           3  ssd1306.o(.constdata)
+    scrollList3a                             0x00007ebc   Data           2  ssd1306.o(.constdata)
+    scrollList3b                             0x00007ebe   Data           2  ssd1306.o(.constdata)
+    scrollList3c                             0x00007ec0   Data           2  ssd1306.o(.constdata)
+    scrollList4a                             0x00007ec2   Data           2  ssd1306.o(.constdata)
+    scrollList4b                             0x00007ec4   Data           2  ssd1306.o(.constdata)
+    scrollList4c                             0x00007ec6   Data           2  ssd1306.o(.constdata)
+    .data                                    0x20000000   Section       44  lab10.o(.data)
+    lastdown                                 0x20000028   Data           4  lab10.o(.data)
+    .data                                    0x2000002c   Section        4  timer0.o(.data)
+    .data                                    0x20000030   Section        4  timer1.o(.data)
+    .data                                    0x20000034   Section        8  sound.o(.data)
+    .data                                    0x2000003c   Section       42  ssd1306.o(.data)
+    DeltaX                                   0x20000044   Data           4  ssd1306.o(.data)
+    MaxX                                     0x20000048   Data           4  ssd1306.o(.data)
+    MinX                                     0x2000004c   Data           4  ssd1306.o(.data)
+    DeltaY                                   0x20000050   Data           4  ssd1306.o(.data)
+    MaxY                                     0x20000054   Data           4  ssd1306.o(.data)
+    MinY                                     0x20000058   Data           4  ssd1306.o(.data)
+    PlotColor                                0x2000005c   Data           2  ssd1306.o(.data)
+    .data                                    0x20000068   Section        4  texas.o(.data)
+    DATA                                     0x2000006c   Section        4  random.o(DATA)
+    M                                        0x2000006c   Data           4  random.o(DATA)
+    .bss                                     0x20000070   Section      920  lab10.o(.bss)
+    .bss                                     0x20000408   Section     1024  ssd1306.o(.bss)
+    .bss                                     0x20000808   Section       96  libspace.o(.bss)
+    HEAP                                     0x20000868   Section        0  startup.o(HEAP)
+    STACK                                    0x20000868   Section     1024  startup.o(STACK)
+    HeapMem                                  0x20000868   Data           0  startup.o(HEAP)
+    StackMem                                 0x20000868   Data           0  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  lab10.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup.o(RESET)
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_fini_                               - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup.o(RESET)
+    NMI_Handler                              0x00000271   Thumb Code     2  startup.o(RESET)
+    HardFault_Handler                        0x00000273   Thumb Code     2  startup.o(RESET)
+    MemManage_Handler                        0x00000275   Thumb Code     2  startup.o(RESET)
+    BusFault_Handler                         0x00000277   Thumb Code     2  startup.o(RESET)
+    UsageFault_Handler                       0x00000279   Thumb Code     2  startup.o(RESET)
+    SVC_Handler                              0x0000027b   Thumb Code     2  startup.o(RESET)
+    DebugMon_Handler                         0x0000027d   Thumb Code     2  startup.o(RESET)
+    PendSV_Handler                           0x0000027f   Thumb Code     2  startup.o(RESET)
+    ADC0Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC0Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq0_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq1_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq2_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ADC1Seq3_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    CAN2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Comp2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    Ethernet_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    ExtBus_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    FPU_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    Fan0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    FlashCtl_Handler                         0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortA_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortB_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortC_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortD_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortE_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortF_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortG_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortH_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortJ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortK_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortL_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortM_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortN_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortP_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ1_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ2_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ3_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ4_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ5_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ6_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ7_Handler                       0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortQ_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortR_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    GPIOPortS_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    Hibernate_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C4_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2C5_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    I2S0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    LPC0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    PECI0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM0Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Fault_Handler                        0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator0_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator1_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator2_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    PWM1Generator3_Handler                   0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature0_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature1_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    Quadrature2_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI1_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI2_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SSI3_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    SysCtl_Handler                           0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer0B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer1B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer2B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer3B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4A_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer4B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    Timer5B_Handler                          0x00000283   Thumb Code     0  startup.o(RESET)
+    UART0_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART1_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART2_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART3_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART4_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART5_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART6_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    UART7_Handler                            0x00000283   Thumb Code     0  startup.o(RESET)
+    USB0_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    WDT_Handler                              0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer0B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer1B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer2B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer3B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer4B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5A_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    WideTimer5B_Handler                      0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Error                               0x00000283   Thumb Code     0  startup.o(RESET)
+    uDMA_Handler                             0x00000283   Thumb Code     0  startup.o(RESET)
+    __main                                   0x00000285   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x0000028d   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x0000028d   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x0000028d   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x0000029b   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x000002c1   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x000002dd   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x000002f9   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_1                       0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x000002fb   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x000002fd   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x000002ff   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_fini_1                 0x000002ff   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x000002ff   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000009)
+    __rt_lib_shutdown_heap_1                 0x000002ff   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000011)
+    __rt_lib_shutdown_return                 0x000002ff   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000012)
+    __rt_lib_shutdown_signal_1               0x000002ff   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_lib_shutdown_stdio_1                0x000002ff   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000006)
+    __rt_lib_shutdown_user_alloc_1           0x000002ff   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E)
+    __rt_entry                               0x00000301   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x00000301   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x00000301   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x00000307   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x00000307   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x0000030b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x0000030b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x00000313   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x00000315   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x00000315   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x00000319   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Clock_Delay                              0x00000321   Thumb Code     6  cortexm.o(.emb_text)
+    DisableInterrupts                        0x00000329   Thumb Code     0  startup.o(.text)
+    EnableInterrupts                         0x0000032d   Thumb Code     0  startup.o(.text)
+    StartCritical                            0x00000331   Thumb Code     0  startup.o(.text)
+    EndCritical                              0x00000339   Thumb Code     0  startup.o(.text)
+    WaitForInterrupt                         0x0000033f   Thumb Code     0  startup.o(.text)
+    __user_initial_stackheap                 0x00000343   Thumb Code     0  startup.o(.text)
+    Random_Init                              0x00000359   Thumb Code     0  random.o(.text)
+    Random32                                 0x0000035f   Thumb Code     2  random.o(.text)
+    Random                                   0x00000371   Thumb Code     2  random.o(.text)
+    __use_two_region_memory                  0x00000395   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x00000397   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x00000399   Thumb Code     2  heapauxi.o(.text)
+    __user_setup_stackheap                   0x0000039b   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x000003e5   Thumb Code    18  exit.o(.text)
+    __user_libspace                          0x000003f9   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x000003f9   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x000003f9   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x00000401   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x0000040d   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x0000040d   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x0000040f   Thumb Code     0  indicate_semi.o(.text)
+    ADC1_Init                                0x00000411   Thumb Code   176  texas.o(i.ADC1_Init)
+    ADC_In                                   0x000004d9   Thumb Code    38  adc.o(i.ADC_In)
+    ADC_Init                                 0x00000505   Thumb Code   210  adc.o(i.ADC_Init)
+    Clock_Delay1ms                           0x000005f1   Thumb Code    22  cortexm.o(i.Clock_Delay1ms)
+    Collision                                0x00000609   Thumb Code  1190  lab10.o(i.Collision)
+    DAC_Init                                 0x00000abd   Thumb Code    42  dac.o(i.DAC_Init)
+    DAC_Out                                  0x00000af5   Thumb Code     6  dac.o(i.DAC_Out)
+    Delay100ms                               0x00000b01   Thumb Code    30  lab10.o(i.Delay100ms)
+    Draw                                     0x00000b25   Thumb Code   640  lab10.o(i.Draw)
+    Fire                                     0x00000dc9   Thumb Code   124  lab10.o(i.Fire)
+    I2C3_Init                                0x00000e51   Thumb Code   152  i2c3.o(i.I2C3_Init)
+    I2C3_Send                                0x00000efd   Thumb Code   220  i2c3.o(i.I2C3_Send)
+    I2C3_Send2                               0x00000fdd   Thumb Code   106  i2c3.o(i.I2C3_Send2)
+    I2C3_SendData                            0x0000104d   Thumb Code   118  i2c3.o(i.I2C3_SendData)
+    Init                                     0x000010c9   Thumb Code   370  lab10.o(i.Init)
+    LogicAnalyzerTask                        0x00001275   Thumb Code    20  lab10.o(i.LogicAnalyzerTask)
+    Move                                     0x00001295   Thumb Code  1222  lab10.o(i.Move)
+    PLL_Init                                 0x00001769   Thumb Code   120  texas.o(i.PLL_Init)
+    Profile_Init                             0x000017e5   Thumb Code    76  lab10.o(i.Profile_Init)
+    SSD1306_ClearBuffer                      0x00001849   Thumb Code    30  ssd1306.o(i.SSD1306_ClearBuffer)
+    SSD1306_DrawBMP                          0x0000186d   Thumb Code   532  ssd1306.o(i.SSD1306_DrawBMP)
+    SSD1306_Init                             0x00001a85   Thumb Code   158  ssd1306.o(i.SSD1306_Init)
+    SSD1306_OutBuffer                        0x00001b41   Thumb Code    30  ssd1306.o(i.SSD1306_OutBuffer)
+    SSD1306_OutChar                          0x00001b69   Thumb Code   238  ssd1306.o(i.SSD1306_OutChar)
+    SSD1306_OutClear                         0x00001c6d   Thumb Code    12  ssd1306.o(i.SSD1306_OutClear)
+    SSD1306_OutString                        0x00001c79   Thumb Code    24  ssd1306.o(i.SSD1306_OutString)
+    SSD1306_OutUDec2                         0x00001c91   Thumb Code    82  ssd1306.o(i.SSD1306_OutUDec2)
+    SSD1306_SetCursor                        0x00001ce5   Thumb Code    94  ssd1306.o(i.SSD1306_SetCursor)
+    SoundTask                                0x00001d55   Thumb Code    58  sound.o(i.SoundTask)
+    Sound_Init                               0x00001d9d   Thumb Code    18  sound.o(i.Sound_Init)
+    Sound_Shoot                              0x00001db5   Thumb Code    14  sound.o(i.Sound_Shoot)
+    Sound_Start                              0x00001dc9   Thumb Code    18  sound.o(i.Sound_Start)
+    Spawn                                    0x00001de9   Thumb Code   108  lab10.o(i.Spawn)
+    Spawn1                                   0x00001e59   Thumb Code   112  lab10.o(i.Spawn1)
+    Spawn2                                   0x00001ecd   Thumb Code   110  lab10.o(i.Spawn2)
+    Spawn3                                   0x00001f41   Thumb Code   112  lab10.o(i.Spawn3)
+    Spawn4                                   0x00001fb5   Thumb Code   110  lab10.o(i.Spawn4)
+    Switch_In                                0x00002029   Thumb Code     6  switch.o(i.Switch_In)
+    Switch_Init                              0x00002035   Thumb Code    52  switch.o(i.Switch_Init)
+    SysTick_Handler                          0x00002079   Thumb Code   270  lab10.o(i.SysTick_Handler)
+    SysTick_Init20Hz                         0x000021bd   Thumb Code    38  lab10.o(i.SysTick_Init20Hz)
+    TExaS_Init                               0x000021ed   Thumb Code    92  texas.o(i.TExaS_Init)
+    Timer0A_Handler                          0x0000225d   Thumb Code    16  timer0.o(i.Timer0A_Handler)
+    Timer0_Init                              0x00002275   Thumb Code    74  timer0.o(i.Timer0_Init)
+    Timer1A_Handler                          0x000022d5   Thumb Code    16  timer1.o(i.Timer1A_Handler)
+    Timer5A_Handler                          0x000022ed   Thumb Code    16  texas.o(i.Timer5A_Handler)
+    UART0_Init                               0x00002305   Thumb Code   152  texas.o(i.UART0_Init)
+    main                                     0x000023b1   Thumb Code   598  lab10.o(i.main)
+    ssd1306command                           0x00002739   Thumb Code    16  ssd1306.o(i.ssd1306command)
+    ssd1306command1                          0x00002749   Thumb Code    16  ssd1306.o(i.ssd1306command1)
+    ssd1306commandList                       0x00002759   Thumb Code    18  ssd1306.o(i.ssd1306commandList)
+    arrow                                    0x0000276a   Data         127  lab10.o(.constdata)
+    ATL_reallybigboi_broken                  0x000027e9   Data         247  lab10.o(.constdata)
+    ATL_reallybigboi_brokehalf               0x000028e0   Data         247  lab10.o(.constdata)
+    ATL_mediumboi_sinking                    0x000029d7   Data         215  lab10.o(.constdata)
+    ATL_jelley                               0x00002aae   Data         167  lab10.o(.constdata)
+    fish                                     0x00002b55   Data         135  lab10.o(.constdata)
+    smolboibroke                             0x00002bdc   Data         167  lab10.o(.constdata)
+    smolboi                                  0x00002c83   Data         167  lab10.o(.constdata)
+    mediumboi                                0x00002d2a   Data         215  lab10.o(.constdata)
+    bigboi                                   0x00002e01   Data         247  lab10.o(.constdata)
+    tridenthand                              0x00002ef8   Data         247  lab10.o(.constdata)
+    trident                                  0x00002fef   Data         151  lab10.o(.constdata)
+    Enemy                                    0x00003086   Data         199  lab10.o(.constdata)
+    Alien10pointA                            0x0000314d   Data         183  lab10.o(.constdata)
+    Alien10pointB                            0x00003204   Data         183  lab10.o(.constdata)
+    Alien20pointA                            0x000032bb   Data         183  lab10.o(.constdata)
+    Alien20pointB                            0x00003372   Data         183  lab10.o(.constdata)
+    Alien30pointA                            0x00003429   Data         183  lab10.o(.constdata)
+    Alien30pointB                            0x000034e0   Data         183  lab10.o(.constdata)
+    AlienBossA                               0x00003597   Data         183  lab10.o(.constdata)
+    AlienBossB                               0x0000364e   Data         183  lab10.o(.constdata)
+    BigExplosion0                            0x00003705   Data         183  lab10.o(.constdata)
+    BigExplosion1                            0x000037bc   Data         183  lab10.o(.constdata)
+    Bunker0                                  0x00003873   Data         151  lab10.o(.constdata)
+    Bunker1                                  0x0000390a   Data         151  lab10.o(.constdata)
+    Bunker2                                  0x000039a1   Data         151  lab10.o(.constdata)
+    Laser0                                   0x00003a38   Data         143  lab10.o(.constdata)
+    Laser1                                   0x00003ac7   Data         143  lab10.o(.constdata)
+    Missile0                                 0x00003b56   Data         151  lab10.o(.constdata)
+    Missile1                                 0x00003bed   Data         151  lab10.o(.constdata)
+    PlayerShip0                              0x00003c84   Data         167  lab10.o(.constdata)
+    PlayerShip1                              0x00003d2b   Data         167  lab10.o(.constdata)
+    PlayerShip2                              0x00003dd2   Data         167  lab10.o(.constdata)
+    logo                                     0x00003e79   Data        2423  lab10.o(.constdata)
+    SpaceInvadersMarquee                     0x000047f0   Data        3959  lab10.o(.constdata)
+    titlepage                                0x00005767   Data        4087  lab10.o(.constdata)
+    titlepage3                               0x0000675e   Data         471  lab10.o(.constdata)
+    shoot2                                   0x00006935   Data        4080  sound.o(.constdata)
+    Region$$Table$$Base                      0x00007ec8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00007ee8   Number         0  anon$$obj.o(Region$$Table)
+    score                                    0x20000000   Data           1  lab10.o(.data)
+    timer                                    0x20000004   Data           4  lab10.o(.data)
+    NeedtoDraw                               0x20000008   Data           4  lab10.o(.data)
+    countbig                                 0x2000000c   Data           4  lab10.o(.data)
+    countsmall                               0x20000010   Data           4  lab10.o(.data)
+    icount                                   0x20000014   Data           4  lab10.o(.data)
+    lang                                     0x20000018   Data           4  lab10.o(.data)
+    m                                        0x2000001c   Data           4  lab10.o(.data)
+    test                                     0x20000020   Data           4  lab10.o(.data)
+    test2                                    0x20000024   Data           4  lab10.o(.data)
+    PeriodicTask0                            0x2000002c   Data           4  timer0.o(.data)
+    PeriodicTask1                            0x20000030   Data           4  timer1.o(.data)
+    Length                                   0x20000034   Data           4  sound.o(.data)
+    SoundPt                                  0x20000038   Data           4  sound.o(.data)
+    vccstate                                 0x2000003c   Data           4  ssd1306.o(.data)
+    rotation                                 0x20000040   Data           4  ssd1306.o(.data)
+    StartX                                   0x2000005e   Data           2  ssd1306.o(.data)
+    CurrentX                                 0x20000060   Data           2  ssd1306.o(.data)
+    StartY                                   0x20000062   Data           2  ssd1306.o(.data)
+    CurrentY                                 0x20000064   Data           2  ssd1306.o(.data)
+    sendDataPt                               0x20000068   Data           4  texas.o(.data)
+    Player                                   0x20000070   Data          40  lab10.o(.bss)
+    tridents                                 0x20000098   Data         400  lab10.o(.bss)
+    bigships                                 0x20000228   Data          80  lab10.o(.bss)
+    mediumships                              0x20000278   Data          80  lab10.o(.bss)
+    smallships                               0x200002c8   Data          80  lab10.o(.bss)
+    jellyfish                                0x20000318   Data         120  lab10.o(.bss)
+    fishies                                  0x20000390   Data         120  lab10.o(.bss)
+    buffer                                   0x20000408   Data        1024  ssd1306.o(.bss)
+    __libspace_start                         0x20000808   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000868   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00007f58, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00007ee8, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000284   Code   RO            3  * RESET               startup.o
+    0x00000284   0x00000284   0x00000008   Code   RO          706  * !!!main             c_w.l(__main.o)
+    0x0000028c   0x0000028c   0x00000034   Code   RO          865    !!!scatter          c_w.l(__scatter.o)
+    0x000002c0   0x000002c0   0x0000001a   Code   RO          867    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x000002da   0x000002da   0x00000002   PAD
+    0x000002dc   0x000002dc   0x0000001c   Code   RO          869    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x000002f8   0x000002f8   0x00000002   Code   RO          733    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          740    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          742    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          745    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          747    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          749    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          752    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          754    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          756    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          758    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          760    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          762    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          764    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          766    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          768    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          770    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          772    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          776    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          778    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          780    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          782    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000002   Code   RO          783    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x000002fc   0x000002fc   0x00000002   Code   RO          803    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          816    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          818    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          820    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          823    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          826    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          828    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          831    .ARM.Collect$$libshutdown$$00000011  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000002   Code   RO          832    .ARM.Collect$$libshutdown$$00000012  c_w.l(libshutdown2.o)
+    0x00000300   0x00000300   0x00000000   Code   RO          708    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x00000300   0x00000300   0x00000000   Code   RO          710    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x00000300   0x00000300   0x00000006   Code   RO          722    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x00000306   0x00000306   0x00000000   Code   RO          712    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x00000306   0x00000306   0x00000004   Code   RO          713    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x0000030a   0x0000030a   0x00000000   Code   RO          715    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x0000030a   0x0000030a   0x00000008   Code   RO          716    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x00000312   0x00000312   0x00000002   Code   RO          737    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x00000314   0x00000314   0x00000000   Code   RO          785    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x00000314   0x00000314   0x00000004   Code   RO          786    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x00000318   0x00000318   0x00000006   Code   RO          787    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x0000031e   0x0000031e   0x00000002   PAD
+    0x00000320   0x00000320   0x00000006   Code   RO          169    .emb_text           cortexm.o
+    0x00000326   0x00000326   0x00000002   PAD
+    0x00000328   0x00000328   0x00000030   Code   RO            4    .text               startup.o
+    0x00000358   0x00000358   0x0000003c   Code   RO           13    .text               random.o
+    0x00000394   0x00000394   0x00000006   Code   RO          704    .text               c_w.l(heapauxi.o)
+    0x0000039a   0x0000039a   0x0000004a   Code   RO          724    .text               c_w.l(sys_stackheap_outer.o)
+    0x000003e4   0x000003e4   0x00000012   Code   RO          726    .text               c_w.l(exit.o)
+    0x000003f6   0x000003f6   0x00000002   PAD
+    0x000003f8   0x000003f8   0x00000008   Code   RO          734    .text               c_w.l(libspace.o)
+    0x00000400   0x00000400   0x0000000c   Code   RO          795    .text               c_w.l(sys_exit.o)
+    0x0000040c   0x0000040c   0x00000002   Code   RO          806    .text               c_w.l(use_no_semi.o)
+    0x0000040e   0x0000040e   0x00000000   Code   RO          808    .text               c_w.l(indicate_semi.o)
+    0x0000040e   0x0000040e   0x00000002   PAD
+    0x00000410   0x00000410   0x000000c8   Code   RO          657    i.ADC1_Init         texas.o
+    0x000004d8   0x000004d8   0x0000002c   Code   RO          203    i.ADC_In            adc.o
+    0x00000504   0x00000504   0x000000ec   Code   RO          204    i.ADC_Init          adc.o
+    0x000005f0   0x000005f0   0x00000016   Code   RO          170    i.Clock_Delay1ms    cortexm.o
+    0x00000606   0x00000606   0x00000002   PAD
+    0x00000608   0x00000608   0x000004b4   Code   RO           16    i.Collision         lab10.o
+    0x00000abc   0x00000abc   0x00000038   Code   RO          185    i.DAC_Init          dac.o
+    0x00000af4   0x00000af4   0x0000000c   Code   RO          186    i.DAC_Out           dac.o
+    0x00000b00   0x00000b00   0x00000024   Code   RO           17    i.Delay100ms        lab10.o
+    0x00000b24   0x00000b24   0x000002a4   Code   RO           18    i.Draw              lab10.o
+    0x00000dc8   0x00000dc8   0x00000088   Code   RO           19    i.Fire              lab10.o
+    0x00000e50   0x00000e50   0x000000ac   Code   RO          303    i.I2C3_Init         i2c3.o
+    0x00000efc   0x00000efc   0x000000e0   Code   RO          308    i.I2C3_Send         i2c3.o
+    0x00000fdc   0x00000fdc   0x00000070   Code   RO          310    i.I2C3_Send2        i2c3.o
+    0x0000104c   0x0000104c   0x0000007c   Code   RO          312    i.I2C3_SendData     i2c3.o
+    0x000010c8   0x000010c8   0x000001ac   Code   RO           20    i.Init              lab10.o
+    0x00001274   0x00001274   0x00000020   Code   RO           21    i.LogicAnalyzerTask  lab10.o
+    0x00001294   0x00001294   0x000004d4   Code   RO           22    i.Move              lab10.o
+    0x00001768   0x00001768   0x0000007c   Code   RO          658    i.PLL_Init          texas.o
+    0x000017e4   0x000017e4   0x00000064   Code   RO           23    i.Profile_Init      lab10.o
+    0x00001848   0x00001848   0x00000024   Code   RO          372    i.SSD1306_ClearBuffer  ssd1306.o
+    0x0000186c   0x0000186c   0x00000218   Code   RO          374    i.SSD1306_DrawBMP   ssd1306.o
+    0x00001a84   0x00001a84   0x000000bc   Code   RO          384    i.SSD1306_Init      ssd1306.o
+    0x00001b40   0x00001b40   0x00000028   Code   RO          386    i.SSD1306_OutBuffer  ssd1306.o
+    0x00001b68   0x00001b68   0x00000104   Code   RO          387    i.SSD1306_OutChar   ssd1306.o
+    0x00001c6c   0x00001c6c   0x0000000c   Code   RO          388    i.SSD1306_OutClear  ssd1306.o
+    0x00001c78   0x00001c78   0x00000018   Code   RO          392    i.SSD1306_OutString  ssd1306.o
+    0x00001c90   0x00001c90   0x00000052   Code   RO          395    i.SSD1306_OutUDec2  ssd1306.o
+    0x00001ce2   0x00001ce2   0x00000002   PAD
+    0x00001ce4   0x00001ce4   0x00000070   Code   RO          398    i.SSD1306_SetCursor  ssd1306.o
+    0x00001d54   0x00001d54   0x00000048   Code   RO          263    i.SoundTask         sound.o
+    0x00001d9c   0x00001d9c   0x00000018   Code   RO          264    i.Sound_Init        sound.o
+    0x00001db4   0x00001db4   0x00000014   Code   RO          265    i.Sound_Shoot       sound.o
+    0x00001dc8   0x00001dc8   0x00000020   Code   RO          266    i.Sound_Start       sound.o
+    0x00001de8   0x00001de8   0x00000070   Code   RO           25    i.Spawn             lab10.o
+    0x00001e58   0x00001e58   0x00000074   Code   RO           26    i.Spawn1            lab10.o
+    0x00001ecc   0x00001ecc   0x00000074   Code   RO           27    i.Spawn2            lab10.o
+    0x00001f40   0x00001f40   0x00000074   Code   RO           28    i.Spawn3            lab10.o
+    0x00001fb4   0x00001fb4   0x00000074   Code   RO           29    i.Spawn4            lab10.o
+    0x00002028   0x00002028   0x0000000c   Code   RO          639    i.Switch_In         switch.o
+    0x00002034   0x00002034   0x00000044   Code   RO          640    i.Switch_Init       switch.o
+    0x00002078   0x00002078   0x00000144   Code   RO           30    i.SysTick_Handler   lab10.o
+    0x000021bc   0x000021bc   0x00000030   Code   RO           31    i.SysTick_Init20Hz  lab10.o
+    0x000021ec   0x000021ec   0x00000070   Code   RO          659    i.TExaS_Init        texas.o
+    0x0000225c   0x0000225c   0x00000018   Code   RO          221    i.Timer0A_Handler   timer0.o
+    0x00002274   0x00002274   0x00000060   Code   RO          222    i.Timer0_Init       timer0.o
+    0x000022d4   0x000022d4   0x00000018   Code   RO          242    i.Timer1A_Handler   timer1.o
+    0x000022ec   0x000022ec   0x00000018   Code   RO          661    i.Timer5A_Handler   texas.o
+    0x00002304   0x00002304   0x000000ac   Code   RO          662    i.UART0_Init        texas.o
+    0x000023b0   0x000023b0   0x00000388   Code   RO           32    i.main              lab10.o
+    0x00002738   0x00002738   0x00000010   Code   RO          408    i.ssd1306command    ssd1306.o
+    0x00002748   0x00002748   0x00000010   Code   RO          409    i.ssd1306command1   ssd1306.o
+    0x00002758   0x00002758   0x00000012   Code   RO          410    i.ssd1306commandList  ssd1306.o
+    0x0000276a   0x0000276a   0x000041cb   Data   RO           34    .constdata          lab10.o
+    0x00006935   0x00006935   0x00000ff0   Data   RO          267    .constdata          sound.o
+    0x00007925   0x00007925   0x000005a3   Data   RO          414    .constdata          ssd1306.o
+    0x00007ec8   0x00007ec8   0x00000020   Data   RO          863    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00007ee8, Size: 0x00000070, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00007ee8   0x0000002c   Data   RW           35    .data               lab10.o
+    0x2000002c   0x00007f14   0x00000004   Data   RW          223    .data               timer0.o
+    0x20000030   0x00007f18   0x00000004   Data   RW          244    .data               timer1.o
+    0x20000034   0x00007f1c   0x00000008   Data   RW          268    .data               sound.o
+    0x2000003c   0x00007f24   0x0000002a   Data   RW          415    .data               ssd1306.o
+    0x20000066   0x00007f4e   0x00000002   PAD
+    0x20000068   0x00007f50   0x00000004   Data   RW          663    .data               texas.o
+    0x2000006c   0x00007f54   0x00000004   Data   RW           12    DATA                random.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000070, Load base: 0x00007f58, Size: 0x00000bf8, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000070        -       0x00000398   Zero   RW           33    .bss                lab10.o
+    0x20000408        -       0x00000400   Zero   RW          413    .bss                ssd1306.o
+    0x20000808        -       0x00000060   Zero   RW          735    .bss                c_w.l(libspace.o)
+    0x20000868        -       0x00000000   Zero   RW            2    HEAP                startup.o
+    0x20000868        -       0x00000400   Zero   RW            1    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       280         32          0          0          0       1184   adc.o
+        28          0          0          0          0        797   cortexm.o
+        68         20          0          0          0        765   dac.o
+       632         36          0          0          0       3109   i2c3.o
+      5700        642      16843         44        920      19076   lab10.o
+        60         14          0          4          0        232   random.o
+       148         40       4080          8          0       2249   sound.o
+      1340         90       1443         42       1024       9214   ssd1306.o
+       692        632          0          0       1024        964   startup.o
+        80         22          0          0          0        782   switch.o
+       632         76          0          4          0       3596   texas.o
+       120         30          0          4          0       1404   timer0.o
+        24          8          0          4          0        902   timer1.o
+
+    ----------------------------------------------------------------------
+      9810       1642      22398        112       2968      44274   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+         6          0          0          2          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        52          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+        18          0          0          0          0         80   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       280         16          0          0         96        584   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       272         16          0          0         96        584   c_w.l
+
+    ----------------------------------------------------------------------
+       280         16          0          0         96        584   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     10090       1658      22398        112       3064      42254   Grand Totals
+     10090       1658      22398        112       3064      42254   ELF Image Totals
+     10090       1658      22398        112          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                32488 (  31.73kB)
+    Total RW  Size (RW Data + ZI Data)              3176 (   3.10kB)
+    Total ROM Size (Code + RO Data + RW Data)      32600 (  31.84kB)
+
+==============================================================================
+
