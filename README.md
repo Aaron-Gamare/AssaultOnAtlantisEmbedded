@@ -8,5 +8,5 @@ The game implements a DAC through the headphone jack, an ADC through the potenti
 
 A video of me playing and describing the game:
 
-[![Watch the video](https://earthandstarryheaven.files.wordpress.com/2016/04/poseidon1-e1490479519320.jpg)](https://www.youtube.com/watch?v=DgZZB3KnLz8&ab_channel=ArshSGamare)
+https://www.youtube.com/watch?v=DgZZB3KnLz8&ab_channel=ArshSGamare
 
