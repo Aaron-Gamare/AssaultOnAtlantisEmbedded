@@ -8,5 +8,5 @@ The game implements a DAC through the headphone jack, an ADC through the potenti
 
 A video of me playing and describing the game:
 
-[![Watch the video](![image](https://user-images.githubusercontent.com/29637620/132895138-9135503c-cd27-44a7-bb37-d739ca4927ad.png))](https://www.youtube.com/watch?v=DgZZB3KnLz8&ab_channel=ArshSGamare)
+[![Watch the video](![image](https://user-images.githubusercontent.com/29637620/132895211-6f5176d2-f8b9-41aa-9d3f-7eb6e921af74.png)))](https://www.youtube.com/watch?v=DgZZB3KnLz8&ab_channel=ArshSGamare)
 
