@@ -7,5 +7,6 @@ The player represents Poseidon, the god of the sea. You have been ordered by Zeu
 The game implements a DAC through the headphone jack, an ADC through the potentiometer, and uses SysTick and other timers for game timing.
 
 A video of me playing and describing the game:
-https://www.youtube.com/watch?v=DgZZB3KnLz8&ab_channel=ArshSGamare
+
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=DgZZB3KnLz8&ab_channel=ArshSGamare)
 
